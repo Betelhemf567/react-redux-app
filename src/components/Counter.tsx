@@ -6,6 +6,7 @@ import {
   decrement,
   reset,
 } from "../store/actions/counterActions";
+import styles from "./Counter.module.css";
 
 const Counter = () => {
   const count = useSelector(
@@ -15,7 +16,7 @@ const Counter = () => {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className={styles.counterContainer}>
       <h2>Counter: {count}</h2>
 
       <button onClick={() => dispatch(increment())}>
